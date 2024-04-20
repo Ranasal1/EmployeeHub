@@ -28,48 +28,30 @@
         <nav id="sidebar" class="sidebar-wrapper">
             <div class="sidebar-content">
                 <div class="sidebar-brand">
-                    <a href="#">NODE MONGO</a>
+                    <a asp-area="" asp-page="/Index">NODE MONGO</a>
                     <div id="close-sidebar">
                         <i class="fas fa-times"></i>
                     </div>
                 </div>
+                <br /><br /><br /><br /><br /><br /><br /><br />
+
                 <div class="sidebar-menu">
                     <ul>
-                        <li class="header-menu">
-                            <span>General</span>
+                        <li>
+                            <a asp-area="" asp-page="/Index">
+                                <i class="fas fa-book"></i>
+                                <span>Employees</span>
+                                </a>
                         </li>
-                        <li class="sidebar-dropdown">
-                            <a href="#">
-                                <i class="fa fa-tachometer-alt"></i>
-                                <span>Category</span>
+
+                        <li>
+                            <a asp-area="" asp-page="/Privacy">
+                                <i class="fas fa-book"></i>
+                                <span>Departments</span>
                             </a>
-                            <div class="sidebar-submenu">
-                                <ul>
-                                    <li>
-                                        <a href="#">Add Category</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">View Category</a>
-                                    </li>
-                                </ul>
-                            </div>
                         </li>
-                        <li class="sidebar-dropdown">
-                            <a href="#">
-                                <i class="fa fa-shopping-cart"></i>
-                                <span>Movies</span>
-                            </a>
-                            <div class="sidebar-submenu">
-                                <ul>
-                                    <li>
-                                        <a href="#">Add Movies</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">View Movies</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
+                        
+                        
                         <li>
                             <a href="#">
                                 <i class="fas fa-book"></i>
@@ -77,6 +59,9 @@
                             </a>
                         </li>
                     </ul>
+                    <br /><br /><br /
+                    <partial name="_LoginPartial" />
+
                 </div>
                 <!-- sidebar-menu  -->
             </div>
