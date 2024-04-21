@@ -27,12 +27,25 @@
         }
     </style>
 
+    <header class="header">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">EmployeeHub</a>
+            </div>
+        </nav>
+    </header>
+
     <div class="page-wrapper chiller-theme toggled">
         <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
             <i class="fas fa-bars"></i>
         </a>
         <nav id="sidebar" class="sidebar-wrapper">
             <div class="sidebar-content">
+                <div class="sidebar-brand">
+                    <div id="close-sidebar">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
             <!--
                 <div class="sidebar-brand">
                     <a asp-area="" asp-page="/Index">EmployeeHub</a>
@@ -44,19 +57,18 @@
                 <div class="sidebar-brand">
                     <img src="~/resource/KAFDLogo.jpg" alt="Logo" class="logo">
                 </div>
-                <br />
                 <div class="sidebar-menu">
                     <ul>
                         <li>
                             <a asp-area="" asp-page="/Index">
-                                <i class="fas fa-book"></i>
+                                <i class="fas fa-home"></i>
                                 <span>Home</span>
                                 </a>
                         </li>
 
                         <li>
                             <a asp-area="" asp-page="/Privacy">
-                                <i class="fas fa-book"></i>
+                                <i class="fas fa-briefcase"></i>
                                 <span>Departments</span>
                             </a>
                         </li>
@@ -64,7 +76,7 @@
                         
                         <li>
                             <a href="#">
-                                <i class="fas fa-book"></i>
+                                <i class="fas fa-address-book"></i>
                                 <span>Employees</span>
                             </a>
                         </li>
@@ -84,6 +96,8 @@
             </div>
 
         </main>
+
+
         <!-- page-content" -->
     </div>
     
