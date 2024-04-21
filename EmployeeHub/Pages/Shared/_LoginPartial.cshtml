@@ -5,6 +5,12 @@
 <ul>
 @if (SignInManager.IsSignedIn(User))
 {
+    <style>
+        .btn-custom {
+            color: white; /* Change the color to your desired color */
+            /* You can add more styling here as needed */
+            }
+    </style>
         <li>
             <a class="nav-link text-light" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">
                 <i class="fas fa-book"></i>
@@ -14,10 +20,10 @@
 
         <li>
             <a>
-                <i class="fas fa-book"></i>
                 <span>
                     <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/Index", new { area = "" })">
-                        <button type="submit" class="nav-link btn btn-link text-ligt">Logout</button>
+                        <i class="fas fa-book"></i>
+                        <button type="submit" class="btn btn-custom">Logout</button>
                     </form>
                 </span>
             </a>

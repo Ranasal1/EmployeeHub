@@ -122,6 +122,7 @@ body {
     top: 0;
     left: -300px;
     z-index: 999;
+    background: #27314a !important; /*change the background color of the sidebar*/
 }
 
     .sidebar-wrapper ul {
