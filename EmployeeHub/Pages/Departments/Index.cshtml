@@ -1,15 +1,20 @@
 ﻿@page
 @model EmployeeHub.Pages.Departments.IndexModel
 
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Departments";
 }
 
-<h1>Index</h1>
+<h1>Departments</h1>
 
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
+@if (User.IsInRole("Admin"))
+{
+    <p><a asp-page="Create">Create New Department</a></p>
+}
 <table class="table">
     <thead>
         <tr>
@@ -43,11 +48,14 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Address)
             </td>
-            <td>
+            @if (User.IsInRole("Admin"))
+            {
+                <td>
                 <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
                 <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
+                </td>
+            }
         </tr>
 }
     </tbody>
