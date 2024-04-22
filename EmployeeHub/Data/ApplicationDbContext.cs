@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using EmployeeHub.Models;
 
 namespace EmployeeHub.Data
 {
@@ -9,5 +10,6 @@ namespace EmployeeHub.Data
             : base(options)
         {
         }
+        public DbSet<EmployeeHub.Models.Department> Department { get; set; } = default!;
     }
 }
