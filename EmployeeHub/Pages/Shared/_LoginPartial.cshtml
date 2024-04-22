@@ -7,13 +7,12 @@
 {
     <style>
         .btn-custom {
-            color: white; /* Change the color to your desired color */
-            /* You can add more styling here as needed */
+            color: white;
             }
     </style>
         <li>
             <a class="nav-link text-light" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">
-                <i class="fas fa-book"></i>
+                <i class="far fa-user-circle"></i>
                 <span>Hello @User.Identity?.Name!</span>
             </a>
         </li>
@@ -22,7 +21,7 @@
             <a>
                 <span>
                     <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/Index", new { area = "" })">
-                        <i class="fas fa-book"></i>
+                        <i class="fas fa-power-off"></i>
                         <button type="submit" class="btn btn-custom">Logout</button>
                     </form>
                 </span>
