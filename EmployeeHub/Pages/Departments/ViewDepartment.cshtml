@@ -1,0 +1,46 @@
+@page
+@model EmployeeHub.Pages.Departments.ViewDepartmentModel
+@{
+}
+
+<h3>Departments</h3>
+
+<hr/>
+
+<table class ="table">
+    <thead>
+        <tr>
+            <Th>
+                Name
+            </Th>
+            <Th>
+                Description
+            </Th>
+            <Th>
+                Contact Information
+            </Th>
+            <Th>
+                Address
+            </Th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var department in Model.departments){
+            <tr>
+                <td>
+                    @department.Name
+                </td>
+                <td>
+                    @department.Description
+                </td>
+                <td>
+                    @department.ContactInformation
+                </td>
+                <td>
+                    @department.Address
+                </td>
+            </tr>
+
+        }
+    </tbody>
+</table>
