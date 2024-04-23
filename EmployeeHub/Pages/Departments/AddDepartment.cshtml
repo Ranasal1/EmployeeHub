@@ -11,13 +11,14 @@
     <div class="mb-3">
         <lable class="form-lable">Name</lable>
         <input type="text" class="form-control" asp-for="Department.Name"/>
+        <span asp-validation-for="Department.Name" class="text-danger"></span>
     </div>
     <div class="mb-3">
         <lable class="form-lable">Description</lable>
         <input type="text" class="form-control" asp-for="Department.Description" />
     </div>
     <div class="mb-3">
-        <lable class="form-lable">ContactInformation</lable>
+        <lable class="form-lable">Contact Information</lable>
         <input type="email" class="form-control" asp-for="Department.ContactInformation"/>
     </div>
     <div class="mb-3">
