@@ -1,0 +1,32 @@
+@page
+@model EmployeeHub.Pages.Departments.AddDepartmentModel
+@{
+}
+
+<h1>Department Registration Form</h1>
+
+<br/> <br/>
+
+<form method="post">
+    <div class="mb-3">
+        <lable class="form-lable">Name</lable>
+        <input type="text" class="form-control" asp-for="Department.Name"/>
+    </div>
+    <div class="mb-3">
+        <lable class="form-lable">Description</lable>
+        <input type="text" class="form-control" asp-for="Department.Description" />
+    </div>
+    <div class="mb-3">
+        <lable class="form-lable">ContactInformation</lable>
+        <input type="email" class="form-control" asp-for="Department.ContactInformation"/>
+    </div>
+    <div class="mb-3">
+        <lable class="form-lable">Address</lable>
+        <input type="text" class="form-control" asp-for="Department.Address"/>
+    </div>
+
+    <div class="mb-3">
+        <button type="submit" class="btn btn-primary">Save</button>
+        <a a class="btn btn-secondary" asp-page="/Departments/ViewDepartment">Cancel</a>
+    </div>
+</form>
