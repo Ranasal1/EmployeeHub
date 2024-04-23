@@ -1,15 +1,23 @@
 @page
 @model EmployeeHub.Pages.Departments.ViewDepartmentModel
+
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
 @{
 }
 
 <h3>Departments</h3>
 
 <hr/>
+@if (User.IsInRole("Admin"))
+{
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <a class="btn btn-outline-primary" asp-page="/Departments/AddDepartment"><i class="fas fa-plus"></i>  Add Department</a>
+    </div>
+}
 
-<div class="d-grid gap-2 col-6 mx-auto">
-    <a class="btn btn-outline-primary" asp-page="/Departments/AddDepartment">Add Department</a>
-</div>
 
 <br/> <br/>
 
