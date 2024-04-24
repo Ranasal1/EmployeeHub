@@ -36,25 +36,30 @@
             <Th>
                 Address
             </Th>
+            <th>
+            </th>
         </tr>
     </thead>
     <tbody>
-        @foreach(var department in Model.departments){
+        @foreach(var item in Model.departments){
             <tr>
                 <td>
-                    @department.Name
+                    @item.Name
                 </td>
                 <td>
-                    @department.Description
+                    @item.Description
                 </td>
                 <td>
-                    @department.ContactInformation
+                    @item.ContactInformation
                 </td>
                 <td>
-                    @department.Address
+                    @item.Address
                 </td>
+                <td>
+                    <a class="btn btn-light" asp-page="/Departments/EditDepartment" asp-route-ID="@item.Id">Edit</a>
+                </td>
+                
             </tr>
-
         }
     </tbody>
 </table>
