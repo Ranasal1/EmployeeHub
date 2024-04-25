@@ -12,7 +12,11 @@
     .custom-btn {
         background-color: #1B273F;
         border-color: #1B273F;
-        color: #C3C5C4; /* Optionally, change text color to white */
+        color: #C3C5C4;
+    }
+    .custom-btn:hover {
+        background-color: Grey; /* Change hover color */
+        border-color: Grey; /* Change border color */
     }
 </style>
 
@@ -40,7 +44,7 @@
                     <p class="card-text">Contact Information: @item.ContactInformation</p>
                     <p class="card-text">Address: @item.Address</p>
                     @if (User.IsInRole("Admin")){
-                        <a class="btn btn-outline-primary btn-sm custom-btn" asp-page="/Departments/EditDepartment" asp-route-ID="@item.Id">Edit</a>
+                        <a class="btn btn-outline-primary btn-sm custom-btn" asp-page="/Departments/EditDepartment" asp-route-ID="@item.Id"> <i class="far fa-edit"></i>  Edit</a>
                     }
                 </div>
             </div>
