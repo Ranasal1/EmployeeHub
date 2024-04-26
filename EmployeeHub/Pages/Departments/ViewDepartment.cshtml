@@ -15,8 +15,8 @@
         color: #C3C5C4;
     }
     .custom-btn:hover {
-        background-color: Grey; /* Change hover color */
-        border-color: Grey; /* Change border color */
+        background-color: Grey;
+        border-color: Grey;
     }
 </style>
 
@@ -45,6 +45,7 @@
                     <p class="card-text">Address: @item.Address</p>
                     @if (User.IsInRole("Admin")){
                         <a class="btn btn-outline-primary btn-sm custom-btn" asp-page="/Departments/EditDepartment" asp-route-ID="@item.Id"> <i class="far fa-edit"></i>  Edit</a>
+                        <a class="btn btn-outline-primary btn-sm custom-btn" asp-page="/Departments/DeleteDepartment" asp-route-ID="@item.Id"> <i class="far fa-edit"></i>  Delete</a>
                     }
                 </div>
             </div>
