@@ -1,0 +1,54 @@
+@page
+@model EmployeeHub.Pages.Departments.DeleteDepartmentModel
+@{
+}
+
+<h1>Delete Department</h1>
+<h3>Are you sure you want to delete this Department?</h3>
+<hr/>
+<style>
+     .custom-btn {
+        background-color: #1B273F;
+        border-color: #1B273F;
+        color: #C3C5C4;
+    }
+    .custom-btn:hover {
+        background-color: Grey;
+        border-color: Grey;
+    }
+      .custom2-btn {
+        background-color: #C3C5C4;
+        border-color: #C3C5C4;
+        color: white;
+    }
+    .custom2-btn:hover {
+        background-color: Grey;
+        border-color: Grey;
+    }
+</style>
+
+<form method="post">
+    <input hidden asp-for="Department.Id"/>
+    <div class="mb-3">
+        <lable class="form-lable">Name</lable>
+        <input type="text" class="form-control" asp-for="Department.Name"/>
+        <span asp-validation-for="Department.Name" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <lable class="form-lable">Description</lable>
+        <input type="text" class="form-control" asp-for="Department.Description" />
+    </div>
+    <div class="mb-3">
+        <lable class="form-lable">Contact Information</lable>
+        <input type="email" class="form-control" asp-for="Department.ContactInformation"/>
+    </div>
+    <div class="mb-3">
+        <lable class="form-lable">Address</lable>
+        <input type="text" class="form-control" asp-for="Department.Address"/>
+    </div>
+
+    <div class="mb-3">
+        <button type="submit" class="btn btn-outline-primary custom-btn">Delete</button>
+        <a a class="btn btn-outline-primary custom2-btn" asp-page="/Departments/ViewDepartment">Cancel</a>
+    </div>
+</form>

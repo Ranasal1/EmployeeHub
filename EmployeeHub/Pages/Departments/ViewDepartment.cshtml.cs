@@ -17,7 +17,7 @@ namespace EmployeeHub.Pages.Departments
         }
         public void OnGet()
         {
-            departments = _context.Department.ToList();
+            departments = _context.Department.Where( x => !x.IsDeleted).ToList();
         }
     }
 }
