@@ -11,5 +11,7 @@ namespace EmployeeHub.Data
         {
         }
         public DbSet<EmployeeHub.Models.Department> Department { get; set; } = default!;
+        public DbSet<EmployeeHub.Models.DepartmentAudit> DepartmentAudit { get; set; } = default!;
+
     }
 }
