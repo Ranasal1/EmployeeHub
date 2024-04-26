@@ -5,6 +5,27 @@
 
 <h1>Department Registration Form</h1>
 
+<style>
+     .custom-btn {
+        background-color: #1B273F;
+        border-color: #1B273F;
+        color: #C3C5C4;
+    }
+    .custom-btn:hover {
+        background-color: Grey;
+        border-color: Grey;
+    }
+      .custom2-btn {
+        background-color: #C3C5C4;
+        border-color: #C3C5C4;
+        color: white;
+    }
+    .custom2-btn:hover {
+        background-color: Grey;
+        border-color: Grey;
+    }
+</style>
+
 <br/> <br/>
 
 <form method="post">
@@ -27,7 +48,7 @@
     </div>
 
     <div class="mb-3">
-        <button type="submit" class="btn btn-primary">Save</button>
-        <a a class="btn btn-secondary" asp-page="/Departments/ViewDepartment">Cancel</a>
+        <button type="submit" class="btn btn-outline-primary custom-btn">Add</button>
+        <a a class="btn btn-outline-primary custom2-btn" asp-page="/Departments/ViewDepartment">Cancel</a>
     </div>
 </form>
