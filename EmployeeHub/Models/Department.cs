@@ -13,5 +13,7 @@ namespace EmployeeHub.Models
         public string ContactInformation { get; set; }
         public string Address { get; set; }
 
+        public bool IsDeleted { get; set; } = false;
+
     }
 }
