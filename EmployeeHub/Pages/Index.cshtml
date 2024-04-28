@@ -9,20 +9,59 @@
 @{
     ViewData["Title"] = "Home page";
 }
+<style>
+    .header {
+        display: flex;
+        
+    }
 
-<div class="text-center">
-    <h1 class="display-4">EmployeeHub</h1>
+    .header-item {
+        width: 218px;
+        height: 82px;
+        left: 426px;
+        top: 8px;
+        font-family: 'Saira Condensed';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 63px;
+        display: inline-block;
+        margin: 0;
+    }
+
+        .header-item + .header-item {
+            margin-left: -48px; /* Adjust this value as needed */
+        }
+
+    .employee {
+        color: #22304E;
+    }
+
+    .hub {
+        color: #C3C5C4;
+    }
+
+</style>
+
+
+<div class="header">
+    <h1 class="header-item employee">Employee</h1><h1 class="header-item hub">Hub</h1>
 </div>
+
+
+    
+
 
 @if (User.IsInRole("Admin"))
 {
     <div class="text-center">
-        <h1 class="display-4">Welcome Admin!</h1>
+        <h2 class="display-4">Welcome Admin!</h2>
     </div>
 
 } else 
 {
     <div class="text-center">
-        <h1 class="display-4">Welcome Employee!</h1>
+        <h2>Welcome Employee!</h2>
+        <h3>We're thrilled to have you here.<br /> EmployeeHub is your central hub for all things related to our organization.<br /> Whether you're looking to connect with colleagues, access important information, or stay updated on company departments, you've come to the right place.</h3>
     </div>
 }
