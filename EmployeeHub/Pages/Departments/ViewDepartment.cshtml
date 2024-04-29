@@ -44,7 +44,7 @@
                     <p class="card-text">Address: @item.Address</p>
                     @if (User.IsInRole("Admin")){
                         <a class="btn btn-outline-primary btn-sm custom-btn" asp-page="/Departments/EditDepartment" asp-route-ID="@item.Id"> <i class="far fa-edit"></i>  Edit</a>
-                        <br/><br/><br/>
+                        <br/>
                         <a class="btn btn-outline-primary btn-sm custom-btn" asp-page="/Departments/DeleteDepartment" asp-route-ID="@item.Id"> <i class="far fa-edit"></i>  Delete</a>
                     }
                 </div>

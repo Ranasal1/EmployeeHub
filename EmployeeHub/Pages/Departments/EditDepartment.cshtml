@@ -26,7 +26,10 @@
     }
 </style>
 <form method="post">
-    <input hidden asp-for="Department.Id"/>
+   <input type="hidden" asp-for="Department.Id" />
+   <input type="hidden" asp-for="Department.CreatorName" />
+   <input type="hidden" asp-for="Department.CreatedDate" />
+
     <div class="mb-3">
         <lable class="form-lable">Name</lable>
         <input type="text" class="form-control" asp-for="Department.Name"/>

@@ -20,23 +20,16 @@ namespace EmployeeHub.Pages.Departments
         {
             return Page();
         }
-         public async Task<IActionResult> OnPostAsync()
+        public async Task<IActionResult> OnPostAsync()
         {
-            if (ModelState.IsValid)
+             if (ModelState.IsValid)
             {
                 await _context.Department.AddAsync(Department);
-                await _context.SaveChangesAsync();
-                DepartmentAudit departmentAuditTrail = new DepartmentAudit
-                {
-                    DepartmentId = Department.Id,
-                    CreatedDate = DateTime.Now,
-                    CreatorName = User.Identity.Name
-                };
-                await _context.DepartmentAudit.AddAsync(departmentAuditTrail);
                 await _context.SaveChangesAsync();
 
                 return RedirectToPage("./ViewDepartment");
             }
+
             return Page();
         }
     }
