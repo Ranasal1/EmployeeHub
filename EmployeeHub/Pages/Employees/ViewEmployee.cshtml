@@ -24,6 +24,13 @@
 
 <hr/>
 
+@if (User.IsInRole("Admin"))
+{
+    <div class="d-grid gap-2 col-4">
+        <a class="btn btn-outline-primary btn-sm custom-btn" asp-page="/Employees/AddEmployee"><i class="fas fa-plus"></i>  Add Employee</a>
+    </div>
+}
+
 
 <br/> <br/>
 <div class="row">
