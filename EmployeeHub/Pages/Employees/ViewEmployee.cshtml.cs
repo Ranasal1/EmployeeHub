@@ -2,9 +2,11 @@ using EmployeeHub.Data;
 using EmployeeHub.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Authorization;
 
 namespace EmployeeHub.Pages.Employees
 {
+    [Authorize]
     public class ViewEmployeeModel : PageModel
     {
         public List<Employee> employees = new List<Employee>();
