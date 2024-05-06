@@ -17,5 +17,10 @@ namespace EmployeeHub.Models
         public string? ModifierName { get; set; }
         public DateTime? ModifiedDate { get; set; }
         public bool IsDeleted { get; set; } = false;
+        // Foreign key for Department
+        public int DepartmentId { get; set; }
+
+        // Navigation property to represent the Department of the Employee
+        public Department Department { get; set; }
     }
 }

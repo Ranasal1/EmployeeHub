@@ -1,4 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Collections.Generic;
+
 
 namespace EmployeeHub.Models
 {
@@ -17,6 +19,9 @@ namespace EmployeeHub.Models
         public string? ModifierName { get; set; }
         public DateTime? ModifiedDate { get; set; }
         public bool IsDeleted { get; set; } = false;
+
+        public ICollection<Employee> Employees { get; set; } = new List<Employee>();
+
 
     }
 }
